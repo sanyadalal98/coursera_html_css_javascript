@@ -22,8 +22,9 @@ h2{
   border-left: 1px solid black;
   border-bottom: 1px solid black;
   padding: 5px;
-  width: 250px;
-  height: 50px ;
+  width: 150px;
+  height: 40px ;
+  position: relative;
   float: right;
 }
 
@@ -40,13 +41,14 @@ section.sushi>h2{
 }
 
 p{
-  padding: 50px 10px 10px 10px;
-  clear: left;
+  padding: 15px 10px 15px 10px;
+  clear: both;
 }
 
 /* Simple Responsive Framework. */
 .row {
   width: 100%;
+  position: relative;
 }
 /********** Desktop view **********/
 @media (min-width: 992px) {
