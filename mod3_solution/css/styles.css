@@ -1,0 +1,36 @@
+
+/** header **/
+
+nav{
+	background-color: #FAD7A0;
+}
+
+.navbar-brand{
+	font-weight: bold;
+	font size: 1.5em;
+	color: #17202A;
+	font-family: 'PT Serif', serif;
+}
+
+/** end of header **/
+h2{
+	margin: 25px auto 30px auto;
+	font-family: 'PT Serif', serif;
+}
+
+h3{
+	padding-top: 10px;
+	font-family: 'PT Serif', serif;
+}
+
+#chicken-tile, #beef-tile, #sushi-tile{
+	background-color: #EBF5FB;
+	margin-bottom: 40px;
+}
+
+#chicken-tile p, #beef-tile p, #sushi-tile p{
+	text-align: justify;
+	padding: 20px;
+	font-family: 'Roboto', sans-serif;
+}
+
