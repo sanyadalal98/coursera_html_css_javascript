@@ -64,19 +64,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  function(res){
-    buildAndShowHomeHTML(res);
-  },
+  buildAndShowHomeHTML,
   true);
 });
 
 function buildAndShowHomeHTML (categories) {
 
   // Load home snippet page
-  $ajaxUtils.sendGetRequest(homeHtmlUrl, function (homeHtml) {
-    var chosenCategoryShortName = chooseRandomCategory(categories);
-    var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName", chosenCategoryShortName.short_name);
-    insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
+  $ajaxUtils.sendGetRequest(
+    homeHtmlUrl,
+    function (homeHtml) {
+      var chosenCategoryShortName = chooseRandomCategory(categories).short_name;
+      chosenCategoryShortName = "'" + chosenCategoryShortName + "'";
+      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName", chosenCategoryShortName);
+      insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
 }
